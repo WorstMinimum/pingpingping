@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                background-color: black;
+                align-items: center;
+                margin: 0;
+            }
+
+            .button-container {
+                display: flex;
+                gap: 100px;
+                flex-wrap: wrap;
+            }
+
+            button {
+                width: 60px;
+                height: 30px;
+                font-size: 18px;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                transition: 0.3 ease;
+            }
+
+            
+
+            .image-button {
+                width: 200px;
+                height: 150px;
+                padding: 0;
+                border: none;
+                cursor: pointer;
+                background: none;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .image-button image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.3 ease;
+            }
+
+            .image-button :hover img {
+                transform: scale(1.05);
+            }
+
+            @media (max-width: 500px) {
+                .image-button {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            
+
+
+            .logout-btn {
+                background-color: black;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+
+
+            h1 {
+                color: white;
+            }
+
+            p {
+                color: aliceblue;
+            }
+
+    
+
+
+        </style>
+        <script>
+            function goToPage1() {
+                window.location.href = "page1.html";
+            }
+
+            function goToPage2() {
+                window.location.href = "page2.html";
+            }
+
+            function logout() {
+                localStorage.clear();
+
+                window.location.href = "login.html"
+            }
+        </script>
+    </head>
+
+
+    <body>
+
+   
+            <div style="text-align: center;">
+            <h1>Champions and Talents across WWE and AEW</h1><br>
+            <div class="button-container"> 
+            <button class="image-button" onclick="goToPage1()">
+                <img src= "data:image/jpeg;base64,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"alt="Page1">
+            </button><br>
+            <button class="image-button" onclick="goToPage2()">
+                <img src="data:image/jpeg;base64,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" alt="Page2">
+            </button>
+        </div>
+            <button class="logout-btn" onclick="logout()">Logout</button><br>
+            <center>
+                <footer>
+            <p>© All rights reserved 2025 | WWE & AEW</p>
+            </footer>
+            </center>
+        </div>
+    </body>
+</html>

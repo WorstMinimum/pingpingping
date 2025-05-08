@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WWE Champions & Talents</title>
+        <style>
+
+            button {
+                font-family: Arial, sans-serif;
+                width: 60px;
+                height: 30px;
+                font-size: 18px;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                transition: 0.3 ease;
+            }
+
+            .image-button {
+                width: 500px;
+                height: 500px;
+                padding: 0;
+                border: none;
+                cursor: pointer;
+                background: grey;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .image-button image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.3 ease;
+                
+            }
+
+
+            .logout-btn {
+                background-color: black;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        </style>
+        <script>
+            function goToPage101() {
+                window.location.href = "page101.html";
+            }
+
+            function logout () {
+                localStorage.clear();
+
+                window.location.href = "login.html"
+            }
+        </script>
+    </head>
+    <body>
+        <div style="text-align: center;">
+        <button class="image-button" onclick="goToPage101()">
+            <img src="https://www.wwe.com/f/styles/talent_champion_lg/public/all/2025/04/Cena_04212025rf_575_Profile--88403e6e6a9851a9491e454258bd0d44.png" alt="page101">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </body>
+</html>
